@@ -1,34 +1,14 @@
-from datetime import date
+first_experiment_id = int(1000)
+gerade_ids = 0
 
-def create_experiments(first_experiment_id):
-    try:
-        first_experiment_id = int(first_experiment_id)
-    except ValueError:
-        print("Fehler: Die first_experiment_id muss eine ganze Zahl sein.")
-        return []
+for id in range(10):
+    exp_id = first_experiment_id + id
+    print(f"Experiment ID: {exp_id}")
+    
+    if id < 5:
+        print(f"Erstes Experiment {id + 1}: {exp_id}")
+    
+    if exp_id % 2 == 0:
+        gerade_ids += 1
 
-    versuchsleiter = "Ihr Name"
-    erstellungsdatum = date.today().isoformat()
-    experimente = []
-
-    for i in range(10):
-        experiment = {
-            "Id_": first_experiment_id + i,
-            "Versuchsleiter": versuchsleiter,
-            "Erstellungsdatum": erstellungsdatum,
-            "Testname": f"Leistungstest {i+1}"
-        }
-        experimente.append(experiment)
-
-    return experimente
-
-first_experiment_id = input("Gib eine Start-ID ein: ")
-experimente = create_experiments(first_experiment_id)
-
-if experimente:
-    print("\nErste fünf Experimente:")
-    for experiment in experimente[:5]:
-        print(experiment)
-
-    gerade_ids = sum(1 for exp in experimente if exp["Id_"] % 2 == 0)
-    print(f"\nAnzahl der Experimente mit gerader ID: {gerade_ids}")
+print(f"\nAnzahl der Experimente mit gerader ID: {gerade_ids}")
