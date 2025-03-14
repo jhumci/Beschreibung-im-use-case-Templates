@@ -29,16 +29,5 @@ Der Use Case beschreibt den Vorgang, bei dem ein registrierter Benutzer sich im 
 1. **Falsche Zugangsdaten**: System zeigt Fehlermeldung „Benutzerdaten inkorrekt“.  
 2. **Verbindungsfehler**: System meldet einen technischen Fehler. Benutzer versucht es erneut.
 
----
 
-## User Stories
-
-1. **User Story 1**  
-   *Als registrierter Nutzer* möchte ich *mich einloggen können*, um *auf meine persönlichen Daten zuzugreifen*.
-
-2. **User Story 2**  
-   *Als Systemadministrator* möchte ich *einen sicheren Login-Prozess haben*, um *unbefugte Zugriffe auf das System zu verhindern*.
-
-3. **User Story 3**  
-   *Als Nutzer* möchte ich *eine klare Fehlermeldung sehen, wenn meine Zugangsdaten falsch sind*, damit *ich das Problem schnell beheben kann*.
 
