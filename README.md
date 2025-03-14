@@ -1,19 +1,44 @@
 # Beschreibung-im-use-case-Templates
-# Use Case 1.01: Benutzerregistrierung  
+# Projekt: Use Case Beschreibung
 
-Ein Benutzer möchte sich auf der Plattform registrieren, um sie zu nutzen.  
+## UC 1.01: Benutzeranmeldung
 
-- **Benutzer** (Hauptperson)  
-- **System** (führt die Registrierung durch)  
+### Ziel
+Der Use Case beschreibt den Vorgang, bei dem ein registrierter Benutzer sich im System anmeldet, um Zugriff auf geschützte Inhalte und Funktionen zu erhalten.
 
-1. Der Benutzer öffnet die Registrierungsseite.  
-2. Er gibt seine Daten (Name, E-Mail, Passwort) ein.  
-3. Das System prüft die Eingaben.  
-4. Das System schickt eine Bestätigungs-E-Mail.  
-5. Der Benutzer klickt auf den Bestätigungslink.  
-6. Das System aktiviert das Konto.  
+### Akteure
+- **Primärer Akteur**: Registrierter Benutzer  
+- **Sekundärer Akteur**: Authentifizierungs-Service
 
-- Wenn die E-Mail schon registriert ist, bekommt der Benutzer eine Fehlermeldung.  
-- Falls die Bestätigungsmail nicht ankommt, kann eine neue angefordert werden.  
+### Vorbedingungen
+- Benutzer verfügt über gültige Login-Daten (Benutzername/E-Mail, Passwort).  
+- Das System ist erreichbar (Server, Datenbank etc.).
 
-Der Benutzer kann sich mit seinem Konto einloggen.  
+### Ablauf (Hauptszenario)
+1. Benutzer ruft die Login-Seite auf.  
+2. Benutzer gibt Benutzernamen/E-Mail und Passwort ein.  
+3. Benutzer klickt auf „Login“.  
+4. System prüft die Anmeldedaten (Authentifizierung).  
+5. Bei korrekten Daten wird der Benutzer auf sein Dashboard weitergeleitet.
+
+### Nachbedingung
+- **Erfolgreich**: Benutzer ist eingeloggt und sieht sein personalisiertes Dashboard.  
+- **Fehlgeschlagen**: Benutzer bleibt auf der Login-Seite und erhält eine Fehlermeldung.
+
+### Ausnahmen
+1. **Falsche Zugangsdaten**: System zeigt Fehlermeldung „Benutzerdaten inkorrekt“.  
+2. **Verbindungsfehler**: System meldet einen technischen Fehler. Benutzer versucht es erneut.
+
+---
+
+## User Stories
+
+1. **User Story 1**  
+   *Als registrierter Nutzer* möchte ich *mich einloggen können*, um *auf meine persönlichen Daten zuzugreifen*.
+
+2. **User Story 2**  
+   *Als Systemadministrator* möchte ich *einen sicheren Login-Prozess haben*, um *unbefugte Zugriffe auf das System zu verhindern*.
+
+3. **User Story 3**  
+   *Als Nutzer* möchte ich *eine klare Fehlermeldung sehen, wenn meine Zugangsdaten falsch sind*, damit *ich das Problem schnell beheben kann*.
+
